@@ -17,16 +17,17 @@ class _ScreenOneState extends State<ScreenOne> {
         title: const Text("Navigation Drawer2"),
         backgroundColor: const Color(0xff764abc),
       ),
+// Drawer:
       drawer: Drawer(
         child: ListView(
           children: const [
             UserAccountsDrawerHeader(
-                decoration: BoxDecoration(color: Color(0xff764abc)),
+                decoration: BoxDecoration(color: Colors.amber),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: AssetImage("images/me.png"),
                 ),
                 accountName: Text("Muhammad Sheraz"),
-                accountEmail: Text("Muhammadsherazkhan104@gmail.com ")),
+                accountEmail: Text("Sananjani104@gmail.com")),
           ],
         ),
       ),
