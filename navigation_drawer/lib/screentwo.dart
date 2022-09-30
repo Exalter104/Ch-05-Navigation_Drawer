@@ -12,32 +12,27 @@ class _ScrrenTwoState extends State<ScrrenTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Navigation Drawer2"),
-        backgroundColor: const Color(0xff764abc),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          children: const [
-            UserAccountsDrawerHeader(
-                decoration: BoxDecoration(color: Color(0xff764abc)),
-                currentAccountPicture: CircleAvatar(
-                  backgroundImage: AssetImage("images/me.png"),
-                ),
-                accountName: Text("Muhammad Sheraz"),
-                accountEmail: Text("Muhammadsherazkhan104@gmail.com ")),
-          ],
+        appBar: AppBar(
+          title: const Text("Navigation Drawer 2"),
+          backgroundColor: const Color(0xff764abc),
         ),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Center(
-            child: TextButton(onPressed: () {}, child: const Text("Screen 02")),
-          )
-        ],
-      ),
-    );
+        body: Column(children: [
+          Expanded(
+              child: ListView.builder(
+                  itemCount: 100,
+                  itemBuilder: (context, index) {
+                    return const ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage("images/me.png"),
+                      ),
+                      title: Text("Shearz"),
+                      subtitle: Text(
+                        "Misscall",
+                        style: TextStyle(color: Colors.red),
+                      ),
+                      trailing: Text("2:45"),
+                    );
+                  }))
+        ]));
   }
 }
